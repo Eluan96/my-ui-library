@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My UI Library Demo</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./packages/ui-library/dist/index.js">
+      import { mount, updateState } from './packages/ui-library/src/index';
+
+      const container = document.getElementById('app');
+      if (container) {
+        mount(container, template, { count: 0 });
+      } else {
+        console.error('Container element not found');
+      }
+      
+      const h = (tag, props, children) => ({ sel: tag, data: props, children });
+
+      const template = (state, updateState) => {
+        return h('div', { class: 'container' }, [
+          h('h1', {}, [String(state.count)]),
+          h('button', { on: { click: () => updateState({ count: state.count + 1 }) } }, ['Add']),
+        ]);
+      }
+
+      
+    </script>
+  </body>
+</html>
+
+

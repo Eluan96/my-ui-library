@@ -1,0 +1,18 @@
+{
+  "name": "ui-library",
+  "version": "1.0.0",
+  "description": "my ui library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\"",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snabbdom": "^3.5.1",
+    "typescript": "^5.2.2"
+  }
+}

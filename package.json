@@ -1,0 +1,20 @@
+{
+  "name": "my-ui-library",
+  "version": "1.0.0",
+  "description": "Monorepo for UI Library",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "start": "lerna run start"
+  },
+  "dependencies": {
+    "snabbdom": "^3.5.1"
+  },
+  "devDependencies": {
+    "lerna": "^7.4.2"
+  }
+}
+

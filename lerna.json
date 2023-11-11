@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["**/*.test.ts", "**/*.spec.ts", "packages/ui-core/dist", "packages/ui-library/dist"]
+    }
+  }
+}
+
+
